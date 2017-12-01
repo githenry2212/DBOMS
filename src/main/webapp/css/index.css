@@ -1,0 +1,40 @@
+@media (min-width:1530px){
+   .oms-container{
+     width: 1510px;
+   }
+ }
+
+@media (min-width:1680px){
+   .oms-container{
+     width: 1655px;
+   }
+ }
+
+@media (min-width:1920px){
+   .oms-container{
+     width: 1900px;
+   }
+ }
+
+.oms-navbar{
+    border-bottom: 1px solid white;
+}
+
+.oms-logo{
+    margin-left: 5px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    width: 240px;
+    height: 70px;
+}
+
+span.oms-title{
+    line-height: 49px;
+    font-size: 40px;
+    color: gray;
+    vertical-align: middle;
+}
+
+.oms-navbar-nav >li >a:HOVER{
+    background-color: transparent;
+}
