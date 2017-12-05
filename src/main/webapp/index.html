@@ -3,6 +3,7 @@
 <head>
     <title>Index</title>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap css -->
     <link href="common/css/bootstrap/3.3.7/bootstrap.min.css" rel="stylesheet">
@@ -13,9 +14,9 @@
 </head>
 <body>
 
-<div class="container oms-container" style="height:400px">
-    <div class="navbar oms-navbar">
-        <img src="img/logo.png" alt="Brand" class="oms-logo"/>
+<div class="container oms-container">
+    <!--<div class="navbar oms-navbar">
+        <img src="img/logo.png" alt="Brand" class="img-responsive img-rounded oms-logo"/>
         <span class="oms-title">&nbsp;This is a test</span>
         <ul class="nav navbar-nav navbar-right oms-navbar-nav">
             <li>
@@ -28,17 +29,66 @@
                 <a href="">logout</a>
             </li>
         </ul>
-    </div>
-    <div class="row">
-        <div class="col-md-2 oms-menu">
-            menu
+    </div>-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    This is a test
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Admin</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;Logout</a></li>
+            </ul>
         </div>
-        <div class="col-md-10 oms-content">
-            content
+    </nav>
+    <div class="row">
+        <div class="col-sm-3 col-md-2 oms-menu">
+            <ul id="oms-menu" class="list-group">
+                <li class="list-group-item">
+                    <a href="/">首页</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" data-toggle="collapse" data-target="#sys_detail">系统管理</a>
+                    <ul class="in list-unstyled" id="sys_detail">
+                        <li class="index">
+                            <a href="/xxx/xxx">xx管理</a>
+                        </li>
+                        <li class="index">
+                            <a href="/xxx/xxx">xx管理</a>
+                        </li>
+                        <li class="index">
+                            <a href="/xxx/xxx">xx管理</a>
+                        </li>
+                        <li class="index">
+                            <a href="/xxx/xxx">xx管理</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-md-2 col oms-content">
+            <div ng-app="myApp" ng-controller="myCtrl">
+
+                名: <input type="text" ng-model="firstName"><br>
+                姓: <input type="text" ng-model="lastName"><br>
+                <br>
+                姓名: {{firstName + " " + lastName}}
+
+            </div>
+
+            <script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "John";
+    $scope.lastName= "Doe";
+});
+</script>
         </div>
     </div>
 </div>
-
+<div class="panel-footer navbar-fixed-bottom"><p class="text-center">面板脚注</p></div>
 <script src="js/index.js"></script>
 </body>
 </html>
