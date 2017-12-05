@@ -1,14 +1,5 @@
-(function(window,undefined){
+var omsApp = angular.module('omsApp',['ngRoute'])
 
-    function preventLinkEvent(){
-        var menus = window.document.querySelectorAll(".oms-menu a");
-        for(var idx = 0;idx<menus.length;idx++){
-            menus[idx].onclick = function(e){
-                e.preventDefault();
-            }
-        }
-    }
-
-    preventLinkEvent();
-
-})(window)
+omsApp.controller('nestedCtrl', function($scope) {
+    $scope.message= "Nested App Controller Displayed";
+});

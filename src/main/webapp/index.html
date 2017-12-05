@@ -7,29 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap css -->
     <link href="common/css/bootstrap/3.3.7/bootstrap.min.css" rel="stylesheet">
-    <!-- Angular js -->
-    <script src="common/js/angular/1.6.6/angular.min.js"></script>
-
     <link href="css/index.css" rel="stylesheet">
 </head>
-<body>
+<body ng-app="omsApp">
 
 <div class="container oms-container">
-    <!--<div class="navbar oms-navbar">
-        <img src="img/logo.png" alt="Brand" class="img-responsive img-rounded oms-logo"/>
-        <span class="oms-title">&nbsp;This is a test</span>
-        <ul class="nav navbar-nav navbar-right oms-navbar-nav">
-            <li>
-                <p class="navbar-text">user:&nbsp;admin</p>
-            </li>
-            <li>
-                <a href="">change password</a>
-            </li>
-            <li>
-                <a href="">logout</a>
-            </li>
-        </ul>
-    </div>-->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -47,48 +29,39 @@
         <div class="col-sm-3 col-md-2 oms-menu">
             <ul id="oms-menu" class="list-group">
                 <li class="list-group-item">
-                    <a href="/">首页</a>
+                    <a href="#/">首页</a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" data-toggle="collapse" data-target="#sys_detail">系统管理</a>
+                    <a href="javascript:void(0)" data-toggle="collapse" data-target="#sys_detail">系统管理</a>
                     <ul class="in list-unstyled" id="sys_detail">
                         <li class="index">
-                            <a href="/xxx/xxx">xx管理</a>
+                            <a href="#/xxx/xxx1">xx管理</a>
                         </li>
                         <li class="index">
-                            <a href="/xxx/xxx">xx管理</a>
+                            <a href="#/xxx/xxx2">xx管理</a>
                         </li>
                         <li class="index">
-                            <a href="/xxx/xxx">xx管理</a>
+                            <a href="#/xxx/xxx3">xx管理</a>
                         </li>
                         <li class="index">
-                            <a href="/xxx/xxx">xx管理</a>
+                            <a href="#/xxx/xxx4">xx管理</a>
                         </li>
                     </ul>
                 </li>
             </ul>
         </div>
-        <div class="col-sm-9 col-md-2 col oms-content">
-            <div ng-app="myApp" ng-controller="myCtrl">
-
-                名: <input type="text" ng-model="firstName"><br>
-                姓: <input type="text" ng-model="lastName"><br>
-                <br>
-                姓名: {{firstName + " " + lastName}}
-
-            </div>
-
-            <script>
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
-    $scope.firstName= "John";
-    $scope.lastName= "Doe";
-});
-</script>
+        <div class="col-sm-9 col-md-2 col oms-content" ng-view>
         </div>
     </div>
+    <div class="panel-footer navbar-fixed-bottom"><p class="text-center">面板脚注</p></div>
 </div>
-<div class="panel-footer navbar-fixed-bottom"><p class="text-center">面板脚注</p></div>
+<!-- js libs start -->
+<!-- Angular js -->
+<script src="common/js/angular/1.6.6/angular.min.js"></script>
+<!-- Angular route js-->
+<script src="common/js/angular/1.6.6/angular-route.min.js"></script>
+<!-- js libs end -->
 <script src="js/index.js"></script>
+<script src="js/route.js"></script>
 </body>
 </html>
