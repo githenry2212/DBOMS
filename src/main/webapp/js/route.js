@@ -5,10 +5,10 @@ omsApp.config(['$locationProvider', function($locationProvider) {
 
 omsApp.config(['$routeProvider',function($routeProvider){
     $routeProvider
-    .when('/',{templateUrl:'/HomePage.html'})
-    .when('/xxx1',{templateUrl:'这是x1页面'})
-    .when('/xxx/xxx2',{templateUrl:'这是x2页面'})
-    .when('/xxx/xxx3',{templateUrl:'这是x3页面'})
-    .when('/xxx/xxx4',{templateUrl:'这是x4页面'})
+    .when('/',{templateUrl:'/html/homepage.html'})
+    .when('/user/index',{templateUrl:'/html/user/index.html'})
+    .when('/role/index',{templateUrl:'/html/role/index.html'})
+    .when('/config/index',{templateUrl:'/html/config/index.html'})
+    .when('/log/index',{templateUrl:'/html/log/index.html'})
     .otherwise({redirectTo:'/'});
 }]);
