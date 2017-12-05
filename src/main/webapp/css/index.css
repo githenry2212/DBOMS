@@ -26,11 +26,9 @@ body{
     display: inline-block;
 }
 
-span.oms-title{
-    line-height: 49px;
-    font-size: 30px;
-    color: gray;
+.oms-brand{
     vertical-align: middle;
+    font-size: 29px;
 }
 
 .oms-navbar-nav >li >a:HOVER{
@@ -38,7 +36,7 @@ span.oms-title{
 }
 
 #oms-menu > li.list-group-item{
-    padding: 0px;
+    padding: 0;
 }
 
 #oms-menu > li:first-child >a{
@@ -50,13 +48,13 @@ span.oms-title{
     outline: none;
     display: block;
     padding: 10px 15px;
-    background: #white;
-    text-decoration: nong;
+    background: white;
+    text-decoration: none;
 }
 
 #oms-menu>li>ul{
     border-top: 1px solid #ddd;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 #oms-menu>li>ul>li{
