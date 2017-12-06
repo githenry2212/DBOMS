@@ -4,11 +4,15 @@ omsApp.config(['$locationProvider', function($locationProvider) {
 }]);
 
 omsApp.config(['$routeProvider',function($routeProvider){
-    $routeProvider
-    .when('/',{templateUrl:'/html/homepage.html'})
-    .when('/user/index',{templateUrl:'/html/user/index.html'})
-    .when('/role/index',{templateUrl:'/html/role/index.html'})
-    .when('/config/index',{templateUrl:'/html/config/index.html'})
-    .when('/log/index',{templateUrl:'/html/log/index.html'})
-    .otherwise({redirectTo:'/'});
+    $routeProvider.when('/',{
+        templateUrl: '/page/home.html'
+    }).when('/user/index',{
+        templateUrl: '/page/user/index.html'
+    }).when('/role/index',{
+        templateUrl:'/page/role/index.html'
+    }).when('/config/index',{
+        templateUrl:'/page/config/index.html'
+    }).when('/log/index',{
+        templateUrl:'/page/log/index.html'
+    }).otherwise({redirectTo:'/'});
 }]);
