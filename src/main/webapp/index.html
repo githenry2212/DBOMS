@@ -32,28 +32,28 @@
         <div class="col-sm-3 col-md-2 oms-menu">
             <ul id="oms-menu" class="list-group">
                 <li class="list-group-item">
-                    <a href="#/">首页</a>
+                    <a ui-sref="home">首页</a>
                 </li>
                 <li class="list-group-item">
                     <a href="javascript:void(0)" data-toggle="collapse" data-target="#sys_detail">系统管理</a>
                     <ul class="in list-unstyled" id="sys_detail">
                         <li class="index">
-                            <a href="#/user/index">用户管理</a>
+                            <a ui-sref="user">用户管理</a>
                         </li>
                         <li class="index">
-                            <a href="#/role/index">角色管理</a>
+                            <a ui-sref="role">角色管理</a>
                         </li>
                         <li class="index">
-                            <a href="#/config/index">配置管理</a>
+                            <a ui-sref="config">配置管理</a>
                         </li>
                         <li class="index">
-                            <a href="#/log/index">日志管理</a>
+                            <a ui-sref="log">日志管理</a>
                         </li>
                     </ul>
                 </li>
             </ul>
         </div>
-        <div class="col-sm-9 col-md-2 col oms-content" ng-view>
+        <div class="col-sm-9 col-md-2 col oms-content" ui-view>
         </div>
     </div>
     <div class="panel-footer navbar-fixed-bottom"><p class="text-center">面板脚注</p></div>
@@ -61,10 +61,11 @@
 <!-- js libs start -->
 <!-- Angular js -->
 <script src="common/js/angular/1.6.6/angular.min.js"></script>
-<!-- Angular route js-->
-<script src="common/js/angular/1.6.6/angular-route.min.js"></script>
+<!-- ui route js-->
+<script src="common/js/ui-router/1.0.11/angular-ui-router.min.js"></script>
+<!-- lazy load js-->
+<script src="common/js/ocLazyLoad/1.0.10/ocLazyLoad.min.js"></script>
 <!-- js libs end -->
-<script src="js/index.js"></script>
 <script src="js/route.js"></script>
 </body>
 </html>
