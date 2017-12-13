@@ -37,5 +37,5 @@ angular.module("omsApp", ["ui.router", "oc.lazyLoad"])
         $stateProvider.state(logState);
         //二级路由跳转
         //$urlRouterProvider.when('/sale', '/sale/unexecuted');
-        $urlRouterProvider.otherwise("/home");
+        $urlRouterProvider.otherwise("/");
     });
