@@ -51,12 +51,12 @@ class DBExecutor(private val conn: Connection) {
         }
     }
 
-    fun batchUpdate(sql: String, setter: PreparedStatement.() -> Unit): Int {
+    fun batchUpdate(sql: String, setter: PreparedStatement.() -> Unit) {
         var ps: PreparedStatement? = null
         try {
             ps = conn.prepareStatement(sql)
             ps.setter()
-            return ps.executeBatch().sum()
+            ps.executeBatch()
         } finally {
             ps?.close()
         }
