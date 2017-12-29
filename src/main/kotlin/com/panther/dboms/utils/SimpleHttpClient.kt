@@ -53,23 +53,24 @@ class SimpleHttpClient {
         return Response(conn.responseCode, conn.responseMessage, respText)
     }
 
-    enum class ContentType(val value: String) {
-        APPLICATION_FORM_URLENCODED("application/x-www-form-urlencoded"),
-        MULTIPART_FORM_DATA("multipart/form-data"),
-        APPLICATION_JSON("application/json;charset=utf-8"),
-        APPLICATION_OCTET_STREAM("application/octet-stream"),
-        TEXT_HTML("text/html"),
-        TEXT_XML("text/xml")
-    }
-
-    enum class Method {
-        GET, POST, PUT, DELETE
-    }
-
-    data class Response(val code: Int, val status: String?, val respText: String?)
 }
 
-fun http(init: SimpleHttpClient.() -> Unit): SimpleHttpClient.Response {
+enum class ContentType(val value: String) {
+    APPLICATION_FORM_URLENCODED("application/x-www-form-urlencoded"),
+    MULTIPART_FORM_DATA("multipart/form-data"),
+    APPLICATION_JSON("application/json;charset=utf-8"),
+    APPLICATION_OCTET_STREAM("application/octet-stream"),
+    TEXT_HTML("text/html"),
+    TEXT_XML("text/xml")
+}
+
+enum class Method {
+    GET, POST, PUT, DELETE
+}
+
+data class Response(val code: Int, val status: String?, val respText: String?)
+
+fun http(init: SimpleHttpClient.() -> Unit): Response {
     val httpClient = SimpleHttpClient()
     httpClient.init()
     return httpClient.execute()
